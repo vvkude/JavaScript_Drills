@@ -1,0 +1,48 @@
+<!-------------------------------------------------------------------------------------------------
+    Eloquent Javascript [ Part 01 - Section 02 ]
+    
+    Assignment:
+    Typical FizzBuzz coding challenge, iniitial phase
+    - Print all the numbers 1 to 100
+    - For numbers divisible by 3, print "Fizz" instead of the number
+    - For numbers divisible by 5 (and not 3), print "Buzz" instead of the number
+
+    Approach:
+    - Loop through all numbers, checking them with the remainder operator (%)
+    - Plan on expanding the program to print "FizzBuzz" in the future for numbers 
+      divisible by both 3 and 5
+    - Assignment specifies to use console.log to print output
+
+-------------------------------------------------------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Eloquent Javascript Exercises- Part 01 - Section 02 - FizzBuzz Exercise</title>
+</head>
+
+<body>
+	<p>Eloquent Javascript Exercises - Part 01 - Section 02 - FizzBuzz Exercise</p>
+	<p>Check console for output</p>
+
+	<script>
+        for (let i = 1; i < 101; ++i) {
+            if (i % 3 == 0 && i % 15 !== 0) {
+                console.log("Fizz");
+            }
+            else if (i % 5 == 0 && i % 15 !== 0) {
+                console.log("Buzz");
+            }
+            else if (i % 15 == 0) {
+                console.log("FizzBuzz");
+            }
+            else {
+                console.log(i);
+            }
+        }
+	</script>
+</body>
+</html>
