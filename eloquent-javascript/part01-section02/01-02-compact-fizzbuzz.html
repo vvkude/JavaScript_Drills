@@ -30,10 +30,10 @@
 
 	<script>
         // Using n to represent that we are outputting it as a number. It's not just an incrementer
-        for (let n = 1;  n <= 100: n++) { //-> increment num after the loop
+        for (let n = 1;  n <= 100; n++) { //-> increment num after the loop
             let word_output = " ";
             if (n % 3 == 0 && n % 15 !== 0) word_output += "Fizz";
-            else if (n % 5 == 0 && n % 15 !== 0) word_output += "Buzz";
+            if (n % 5 == 0 && n % 15 !== 0) word_output += "Buzz";
         // Below, we take advantage of the fact that whitespace is FALSE in javascript
         // So, an OR (||) pipe will display a number if the word_output variable is whitespace
             console.log(word_output || n);
