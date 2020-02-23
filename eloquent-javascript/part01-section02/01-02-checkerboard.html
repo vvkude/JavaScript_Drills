@@ -8,7 +8,8 @@
     Approach:
     - Try to define the checkerboard as something that can expand as strings are added
     - Strings added will be whitespace (" ") or hastags (#)
-    - Use the remainder operator to place a whitespace on every other space
+    - Use a nested for loop so that we build the x-axis for every y-axis position
+    - Use the remainder operator to place a whitespace on every other space (even spaces)
 
 -------------------------------------------------------------------------------------------------->
 
@@ -26,7 +27,7 @@
 	<p>Check console for output</p>
 
 	<script>
-        let size = 8;
+        let size = 16;
 
         let checkerboard = "";
         // In the outer for loop below, we must remember to increment _after_ the operations
@@ -39,7 +40,7 @@
                     checkerboard += "#";
                 }
             }
-            checkerboard += "\n';"
+            checkerboard += "\n";
         }
         console.log(checkerboard);
 	</script>
