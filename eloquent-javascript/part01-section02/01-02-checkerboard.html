@@ -1,0 +1,47 @@
+<!-------------------------------------------------------------------------------------------------
+    Eloquent Javascript [ Part 01 - Section 02 ] Checkerboard
+    
+    Assignment:
+    - Output an 8x8 checkerboard pattern with hastags and whitespaces
+    - Define a size variable that allows the checkerboard to be any size
+
+    Approach:
+    - Try to define the checkerboard as something that can expand as strings are added
+    - Strings added will be whitespace (" ") or hastags (#)
+    - Use the remainder operator to place a whitespace on every other space
+
+-------------------------------------------------------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Eloquent Javascript Exercises- Part 01 - Section 02 - Checkerboard</title>
+</head>
+
+<body>
+	<p>Eloquent Javascript Exercises - Part 01 - Section 02 - Checkerboard Exercise</p>
+	<p>Check console for output</p>
+
+	<script>
+        let size = 8;
+
+        let checkerboard = "";
+        // In the outer for loop below, we must remember to increment _after_ the operations
+        for (let y_axis = 0; y_axis < size; y_axis++) {
+            for (let x_axis = 0; x_axis < size; x_axis++) {
+                if ((x_axis + y_axis) % 2 ==0) {
+                    checkerboard += " ";
+                }
+                else {
+                    checkerboard += "#";
+                }
+            }
+            checkerboard += "\n';"
+        }
+        console.log(checkerboard);
+	</script>
+</body>
+</html>
