@@ -23,8 +23,11 @@
 	<p>Check console for output</p>
 
 	<script>
-		let abc = "abc";
-		console.log(abc.length);
+		let brick = "#";
+		for (let i = 0; i < 7; i += 1) {
+			console.log(brick); //-> #
+			brick += "#"; // add a hashtag to brick
+		}
 	</script>
 </body>
 </html>
