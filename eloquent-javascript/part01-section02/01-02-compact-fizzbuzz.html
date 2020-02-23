@@ -1,0 +1,43 @@
+<!-------------------------------------------------------------------------------------------------
+    Eloquent Javascript [ Part 01 - Section 02 ]
+    
+    Assignment:
+    Typical FizzBuzz coding challenge, iniitial phase
+    - Print all the numbers 1 to 100
+    - For numbers divisible by 3, print "Fizz" instead of the number
+    - For numbers divisible by 5 (and not 3), print "Buzz" instead of the number
+    - For numbers divisible by 15, print "FizzBuzz"
+
+    Approach:
+    - Loop through all numbers, checking them with the remainder operator (%)
+    - Add "Fizz" and "Buzz" as strings to some initialized whitespace character
+    - Use an OR pipe to determine whether to print a numeric output or the string
+
+-------------------------------------------------------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Eloquent Javascript Exercises- Part 01 - Section 02 - FizzBuzz Exercise</title>
+</head>
+
+<body>
+	<p>Eloquent Javascript Exercises - Part 01 - Section 02 - FizzBuzz Exercise</p>
+	<p>Check console for output</p>
+
+	<script>
+        // Using n to represent that we are outputting it as a number. It's not just an incrementer
+        for (let n = 1;  n <= 100: n++) { //-> increment num after the loop
+            let word_output = " ";
+            if (n % 3 == 0 && n % 15 !== 0) word_output += "Fizz";
+            else if (n % 5 == 0 && n % 15 !== 0) word_output += "Buzz";
+        // Below, we take advantage of the fact that whitespace is FALSE in javascript
+        // So, an OR (||) pipe will display a number if the word_output variable is whitespace
+            console.log(word_output || n);
+        } 
+	</script>
+</body>
+</html>

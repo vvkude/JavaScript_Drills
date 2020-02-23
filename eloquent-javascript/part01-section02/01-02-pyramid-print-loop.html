@@ -23,10 +23,10 @@
 	<p>Check console for output</p>
 
 	<script>
-		let brick = "#";
-		for (let i = 0; i < 7; ++i) {
-			console.log(brick); //-> #
-			brick += "#"; // add a hashtag to brick
+		// We can wrap the variable initialization and assignment, the logical check of the brick
+		// length and the post-condition action into the for statement
+		for (let brick = "#"; brick.length < 8; brick += "#") {
+			console.log(brick);
 		}
 	</script>
 </body>
