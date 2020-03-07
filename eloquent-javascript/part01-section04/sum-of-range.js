@@ -13,3 +13,11 @@ function range(start, end, step = start < end ? 1 : -1) {
 	}
 	return array;
 }
+
+function sum(array) {
+	let total = 0;
+	for (let elements of array) {
+		total += elements;
+	}
+	return total;
+}
