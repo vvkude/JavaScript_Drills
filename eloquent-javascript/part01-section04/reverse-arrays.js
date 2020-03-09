@@ -12,9 +12,25 @@
 
 function reverseArray(array) {
     let outputArray = [];
-// the length of the array minus 1 is the index of its last element
+    // the length of the array minus 1 is the index of its last element
     for (let i = array.length - 1; i >= 0; i--) {
         outputArray.push(array[i]);
     } 
     return outputArray;
+}
+
+// Reversing the array in place is trickier to loop over indexes
+// 1. Like in the previous function, take the elements from the end of the argument array
+// 2. Try to swap the last element for the first element
+// 3. Try to swap the second to last element for the second to first element
+// 4. Figure out how to avoid swapping the middle (what about even/ odd numbers indexes?)
+// 5. Let's try Math.floor(array.length/2) as the loop conditional
+
+function reverseArrayInPlace(array) {
+    for (i = 0; i <= Math.floor(array.length / 2); i++) {
+        let swap = array[i];
+	array[i] = array[array.length - 1 - i];
+	array[array.length - 1 - i] = swap;
+    }
+	return array;
 }
